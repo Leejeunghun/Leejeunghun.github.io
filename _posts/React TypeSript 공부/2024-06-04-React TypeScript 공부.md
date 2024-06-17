@@ -52,19 +52,19 @@ npx create-react-app typescript-tutorial --template typescript
 # TypeScipt 기본
 1. 변수 선언시 자료형을 밝혀줘야한다
 
-``` Ts
+``` 
 let name: String  = "Leejeunghun";
 ```
 
 2. 자료형을 맞는 형태를 써야한다
 
-```Ts
+```
 let name: string;
 let age : number;
 let isStudent : boolean;
 let hobbies: string[]; 
 let role:[number,string] ;//튜플
-
+```
 
 
 // 오브젝트도 선언이 가능하다
@@ -73,14 +73,12 @@ type Person= {
     age? : number; // 옵션으로 추가할 수 있따.
 }
 
-let person:Person = {
-    name: "piysh",
-    age : 22,
-}
 
+3. 리스트 선언
 let lotsOfPeople: Person[]; //오브젝트 리스트 선언이 가능하다.
 
-//union 선언 숫자 글자 둘다 쓰고 싶을때
+
+4. union 선언 숫자 글자 둘다 쓰고 싶을때
 let age : number | string;
 
 /** 함수 선언 방법 1번
@@ -90,7 +88,7 @@ function printName (name: string){
 printName("piysh")
 */
 
-/** 함수 선언 방법 2번 
+/** 함수 선언 방법 2번  이것 자주 쓰는 틋하다
 let printName : (name: String) => never;
 let printName : (name: String) => void;
 차이가 있다.
@@ -104,7 +102,7 @@ role = [5,"something"];
 
 
 
-와
+ 클래스 상속 
 interface person = {
     name: "piysh",
     age : 22,
@@ -137,6 +135,7 @@ let y:Y = {
 
 # 참조
  1. 확장 프로그램 사용후 해당 명령어 수행시 기본적인 틀 만들어준다
+
 ```
 rafce
 
