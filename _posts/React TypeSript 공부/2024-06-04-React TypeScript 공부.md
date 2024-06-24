@@ -1,11 +1,12 @@
 ---
-title: "React Type Scipt 공부 "
+title: "React Type TypeScript 공부 "
 date: 2024-06-04
 last_modified_at: 2024-06-04
 categories:
-  - 컴퓨터비전
+  - React
 tags:
-  - 컴퓨터비전
+  - React
+  - TypeScript
 
 
 published: true
@@ -58,7 +59,7 @@ let name: String  = "Leejeunghun";
 
 2. 자료형을 맞는 형태를 써야한다
 
-```
+```ts
 let name: string;
 let age : number;
 let isStudent : boolean;
@@ -68,52 +69,67 @@ let role:[number,string] ;//튜플
 
 
 // 오브젝트도 선언이 가능하다
+```ts
 type Person= {
     name : string;
     age? : number; // 옵션으로 추가할 수 있따.
 }
-
+let person:Person =
+{
+    name: "LJH",
+    age : 22
+}
+```
 
 3. 리스트 선언
+```ts
 let lotsOfPeople: Person[]; //오브젝트 리스트 선언이 가능하다.
 
-
+```
 4. union 선언 숫자 글자 둘다 쓰고 싶을때
+```ts
 let age : number | string;
+```
 
-/** 함수 선언 방법 1번
+5. 함수 선언 
+1번 방식
+```ts
+//함수 선언 방법 1번
 function printName (name: string){
     console.log(name);
 }
 printName("piysh")
-*/
+```
+2번 방식 
 
-/** 함수 선언 방법 2번  이것 자주 쓰는 틋하다
+```ts
+//함수 선언 방법 2번  이것 자주 쓰는 틋하다
+
 let printName : (name: String) => never;
 let printName : (name: String) => void;
-차이가 있다.
-*/
+```
 
+6. any 및 unkown 타입
+```ts
 let name : any; // 제한이 없는 함수 권장하지 않음 
 let personName: unknown; // 알지 못하는 경우
-
-name = 5; // 에러
-role = [5,"something"];
+```
 
 
-
- 클래스 상속 
+ 7. 클래스 상속 
+ ```ts
 interface person = {
     name: "piysh",
     age : 22,
 }
-
 interface Guy extends Person {
     Profession:string;
 }
+```
 연장하면서 쓸수 있다.
 
 
+```ts
 type X = {
     a: string;
     b: number;
@@ -132,6 +148,11 @@ let y:Y = {
 
 ```
 
+```
+타입과의 차이는 interface에서 연장하는데 문제가 있다.
+
+
+```
 
 # 참조
  1. 확장 프로그램 사용후 해당 명령어 수행시 기본적인 틀 만들어준다
