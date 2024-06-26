@@ -69,18 +69,55 @@ useState로 상태를 갱신하는 작업은 비동기적으로 이루어지기 
 예를 들어:
 
 JavaScript
-
+```ts
 setValue(prevValue => prevValue + 1);
-AI가 생성한 코드입니다. 신중하게 검토하고 사용하세요. FAQ의 자세한 정보.
+```
 이렇게 하면, setValue 호출 후에 value는 증가된 값으로 갱신됩니다. 이 방법을 통해 useState의 비동기적인 동작으로 인한 문제를 해결할 수 있습니다1.
 
 
+기본적인 형태
 
 ```ts
-
-
+  const [todo, setTodo] = useState<string>("");
 ```
 
+
+처음에 함수 선언하면
+
+```ts
+const InpustFeild = ({todo,set Todo }: {todo, setTdo}) => {
+} 
+```
+
+interface 사용사 쓸수있다.
+```ts
+interface Props {
+  todo: stirng;
+  setTodo: const setTodo: React.Dispatch<React.SetStateAction<string>>; // 해당 창은 찾으면된다
+}
+
+const InputFeild = ({todo, setTodo}: Props) =>{
+
+}
+```
+ 또는
+```ts
+const InputFeild:React.FC<Props> = ({todo, setTodo}) =>{
+}
+```
+
+
+이벤트를 수신할때 e 가 호출됩니다. - 개인적으로 신기함
+
+```ts
+        <input type ='input '
+          ref = {inputRef} 
+          value ={todo} 
+          onChange ={
+            (e) => setTodo(e.target.value)
+          }
+        placeholder='Enter a task' className='input__box'/>
+```
 
 
 # 자료 출처
