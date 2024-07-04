@@ -120,6 +120,80 @@ const InputFeild:React.FC<Props> = ({todo, setTodo}) =>{
 ```
 
 
+기본적으로 결과가 출력되기 위해 해당 함수 호출하도록 설정한다
+```ts
+const handleAdd =() => {
+  
+};
+
+
+  <InputFeild todo = {todo} setTodo={setTodo} handleAdd = {handleAdd}/>
+
+<!-- 다른 곧에서 호출 -->
+interface Props{
+  todo : string;
+  setTodo: React.Dispatch<React.SetStateAction<string>>;
+  handleAdd : (e: React.FormEvent) => void;
+}
+
+const InputFeild: React.FC<Props> = ({ todo, setTodo, handleAdd} ) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  return (
+    <form className= 'input' onSubmit={(e) => {
+      
+      handleAdd(e)
+      inputRef.current?.blur();
+      
+    }}>
+        <input type ='input '
+          ref = {inputRef} 
+          value ={todo} 
+          onChange ={
+            (e) => setTodo(e.target.value)
+          }
+        placeholder='Enter a task' className='input__box'/>
+
+        <button className='input_submit' type="submit"> GO</button>
+    </form>
+  )
+}
+
+
+```
+
+
+## 내용물 확인하는 방법
+```
+    {todos.map((t) => (
+      <li>{t.todo}</li>
+    ))
+    }
+
+
+```
+
+## useRef 
+```html
+useRef는 React의 Hooks 중 하나로, 변경 가능한 ref 객체를 반환합니다. 이 ref 객체는 .current 프로퍼티를 통해 접근할 수 있으며, 이 프로퍼티는 컴포넌트의 전 생애주기 동안 유지됩니다1. useRef는 주로 다음 두 가지 경우에 사용됩니다:
+
+DOM 요소에 직접 접근할 때: useRef를 사용하여 생성된 ref 객체를 DOM 요소에 연결함으로써, 해당 요소에 직접 접근할 수 있습니다. 이를 통해 요소의 focus를 관리하거나, 애니메이션을 적용하는 등의 작업을 할 수 있습니다.
+
+렌더링 사이에 값을 유지하고 싶을 때: useState와 달리, useRef로 생성된 객체의 .current 프로퍼티에 저장된 값은 컴포넌트가 리렌더링될 때 초기화되지 않습니다. 따라서, 타이머 ID, 외부 라이브러리의 인스턴스 등 렌더링 사이에 유지해야 하는 값을 저장하는 데 사용할 수 있습니다.
+
+```
+
+
+## 리엑트에서 아이콘 설치하기
+자료 링크
+https://react-icons.github.io/react-icons/
+
+```sh
+npm install react-icons --save
+```
+
+
+
 # 자료 출처
 1. 메인 강의 자료
 https://www.youtube.com/watch?v=FJDVKeh7RJI&ab_channel=freeCodeCamp.org
