@@ -193,6 +193,30 @@ npm install react-icons --save
 ```
 
 
+## css 설정
+ 특정 조건을 줘서 조정이 가능하다. 
+
+```css
+  @media (max-width: 700px) {
+    .input {
+      width: 95%;
+    }
+    .container {
+      width: 95%;
+      flex-direction: column;
+    }
+    .todos {
+      width: 95%;
+      margin-bottom: 10px;
+    }
+  }
+```
+
+
+
+
+
+
 
 # 자료 출처
 1. 메인 강의 자료
