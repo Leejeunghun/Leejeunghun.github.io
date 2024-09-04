@@ -1,13 +1,11 @@
 ---
 title: "[STM32] 2024-01-03-STM32 3일차_TIM_Interrupt 및 외부 인터럽트  "
 date: 2024-01-03
-last_modified_at: 2024-01-03
+last_modified_at: 2024-09-04
 categories:
   - STM32
 tags:
   - STM32
-
-
 published: true
 toc: true
 toc_sticky: true
@@ -26,7 +24,7 @@ toc_sticky: true
 16비트인경우 65535 
 32비트인경우 4294987265 까지 증가한다
 
-## AUTORELOAD Register  (ARR Register)
+## AUTORELOAD Register  (ARR Register) 
 = 주기
 어떤 값을 주면 해당 값이 카운터값이 업데이트 인터럽트가 발생한다
 
@@ -34,13 +32,12 @@ toc_sticky: true
 한클럭이 증가하는데 걸리는 시간
 예시 = 168MHZ
 
+ 타이머 클럭 사용에 따라 사용법이 다르다
+예를들어 
 APB1 TIM CLK = HCLK/2 =84MHZ
-
-
 APB2 TIM CLK = HCLK = 168MHZ
  AMHB AMBA 추가로  있다
 
- 타이머 클럭 사용에 따라 사용법이 다르다
 
 # PreScaler  
 인터럽트가 빨리 걸리는 것을 막기 위해 만든 개념
