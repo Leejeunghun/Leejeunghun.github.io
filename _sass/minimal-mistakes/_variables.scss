@@ -151,7 +151,7 @@ $large: 1024px !default;
 $x-large: 1280px !default;
 $xx-large :1400xx !default;
 $xxx-large :1600xx !default;
-$max-width: $x-large !default;
+$max-width: $xx-large !default;
 
 /*
    Grid
@@ -161,7 +161,7 @@ $max-width: $x-large !default;
 $right-sidebar-width: 75px !default;
 $right-sidebar-width-wide: 100px !default;
 */
-$right-sidebar-width-narrow: 700px !default;
+$right-sidebar-width-narrow: 300px !default;
 $right-sidebar-width: 450px !default;
 $right-sidebar-width-wide: 600px !default;
 
