@@ -3,7 +3,6 @@ title: "Gemini QNA 정리"
 categories:
   - Gemini
 tags: [Gemini ]
-toc : true
 comments: true
 ---
 
