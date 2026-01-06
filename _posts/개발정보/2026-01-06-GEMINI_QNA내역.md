@@ -12,7 +12,7 @@ comments: true
 Gemini 질문을 하고 문제 해결 내역을 정리한 포스팅입니다.
 
 
-<details> 
+<details markdown="1"> 
 <summary>1. 윈도우에서 UBUNTU 멀티 부팅 방법</summary>
 
 윈도우와 우분투(Ubuntu)를 하나의 컴퓨터에서 함께 사용하는 **듀얼 부팅(Dual Booting)** 환경을 구축하는 것은 개발자나 리눅스 학습자에게 매우 유용한 방법입니다.
@@ -118,7 +118,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 </details>
 
 
-<details> 
+<details markdown="1"> 
 
 <summary>2. 용량이 기존보다 작게된 USB 메모리 초기화 방법 </summary>
 
