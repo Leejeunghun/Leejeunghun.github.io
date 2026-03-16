@@ -34,6 +34,8 @@ toc_sticky: true
 
  타이머 클럭 사용에 따라 사용법이 다르다
 예를들어 
+APB = Advanced Peripheral Bus (주변장치 버스)
+
 APB1 TIM CLK = HCLK/2 =84MHZ
 APB2 TIM CLK = HCLK = 168MHZ
  AMHB AMBA 추가로  있다
@@ -66,6 +68,8 @@ NVIC 설정 및 위에 Prescaler 및 ARP 값을 수정해준다
 ![TIM 설정](/assets/img/Stm32/%ED%83%80%EC%9D%B4%EB%A8%B8%20%EC%84%A4%EC%A0%95.png)
 
 <span style="color:red">현재 타이머 1초가 정확하지 않음 않음 확인 작업 필요함</span>
+-> 해당 값에서 1씩 빼준 값을 넣어줘야한다
+![타이머 인터럽트](STM_32 타이머 인터럽트2.png)
 
 정확한 클럭 APB1 APB2 인지 확인 필요함
 
