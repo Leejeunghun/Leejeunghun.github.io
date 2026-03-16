@@ -79,7 +79,12 @@ NVIC 설정 및 위에 Prescaler 및 ARP 값을 수정해준다
 
 
 
-# EXTI 외부 인터럽트
+# EXTI 외부 인터럽트 External interrupt/event controller
+
+1. NVIC 에서 인터럽트 세팅
+2. NVIC -> CodeGenerator 에서 생성
+3. GPIO 에서 인터럽트 모드 세팅
+
 
 환경은 복잡한데 현재 실제 보드 데이터 연동해서 보는 방법을 자세히 알지 못해 기본 세팅을 위주로한다
 
