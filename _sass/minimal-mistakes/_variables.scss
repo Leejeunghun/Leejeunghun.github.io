@@ -161,10 +161,15 @@
    $right-sidebar-width: 75px !default;
    $right-sidebar-width-wide: 100px !default;
    */
+   /* 기본값 
    $right-sidebar-width-narrow: 400px !default;
    $right-sidebar-width: 400px !default;
    $right-sidebar-width-wide: 500px !default;
-   
+   */   
+   $right-sidebar-width-narrow: 250px !default;
+   $right-sidebar-width: 300px !default;
+   $right-sidebar-width-wide: 350px !default;
+
    /*
       Other
       ========================================================================== */
