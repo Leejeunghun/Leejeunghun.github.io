@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "이 정훈"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "OpenCV를 이용하여 이미지 처리 및 웹 관련 에 관심있는 개발자 "
+  bio              : "AI 코딩을 따라가는 뱁새"
   location         : "인천"
   email            : "dlwjdgnsdla@naver.com"
   links:
